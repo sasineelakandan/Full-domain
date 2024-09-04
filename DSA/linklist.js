@@ -1,4 +1,4 @@
-const { cursorTo } = require("readline")
+
 
 class Node{
   constructor(val){
