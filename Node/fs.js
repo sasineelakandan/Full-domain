@@ -1,23 +1,18 @@
-const express = require('express')
-const fs=require('fs')
+const express = require("express")
+const fs = require("fs")
+let app = express()
 
-const app=express()
-
-app.get('/',async(req,res)=>{
-let i=1
- let b=setInterval(()=>{
-    if(i>=10){
-     clearInterval(b)
-     res.send('hai')
+app.get("/",(req,res)=>{
+    let i = 0
+    let int = setInterval(()=>{
+     console.log(i)
+    if(i==10){
+        clearInterval(int)
+        console.log("done")
     }
-    fs.appendFileSync('file.txt',`${new Date()}+\n`)
-    i++
-    
-
-   },2000)
+     fs.appendFileSync("text.text",`${new Date()}`+'\n')
+     i++
+ },1000)
+}).listen(3000,()=>{
+    console.log("server starts at 3000")
 })
-
-app.listen(8000,()=>{
-    console.log('port Start')
-})
-
