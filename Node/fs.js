@@ -171,3 +171,61 @@
 //   const date=new Date()
 // console.log(`${date.getDate()}/${1+date.getMonth()}/${date.getFullYear()}`)
 
+// let a='silent' 
+// let b='listen'
+// let arr=[]
+// let count=0
+// for(let i=0;i<a.length;i++){
+//     if(b.includes(a[i])){
+//       arr.push(true)
+//     }
+//     if(arr[i]==true){
+//         count++
+//     }
+// }
+// console.log(count)
+// console.log(arr.length==count)
+
+// function quicksort(arr){
+//   if(arr.length<=1){
+//     return arr
+//   }
+//   let pivot=arr[arr.length-1]
+//   let left=[]
+//   let right=[]
+  
+
+//   for(let i=0;i<arr.length-1;i++){
+//     if(arr[i]<pivot){
+//         left.push(arr[i])
+//     }else{
+//         right.push(arr[i])
+//     }
+//   }
+//   return [...quicksort(left),pivot,...quicksort(right)]
+// }
+
+// let array=[1,3,5,2,9,8,7]
+// console.log(quicksort(array))
+
+
+
+// function sort(arr){
+// let tempStack=[]
+//  while(arr.length>0){
+//     let temp=arr.pop()
+//     while(tempStack.length>0&&tempStack[tempStack.length-1]>temp){
+//         arr.push(tempStack.pop())
+//     }
+//     tempStack.push(temp)
+    
+//  }
+//   return tempStack
+// }
+
+// console.log(sort([33,7,4]))
+
+
+function sort(arr){
+let tempstack=[]
+}
