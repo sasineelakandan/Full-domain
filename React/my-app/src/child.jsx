@@ -2,11 +2,11 @@ import React from 'react'
 
 const child = ({count}) => {
 
-    
+    count('hello')
   return (
     <>
     <div> from child </div>
-    <p>{count}</p>
+    
     </>
   )
 }
