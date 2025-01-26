@@ -1,11 +1,11 @@
 import React from 'react'
 
-const child = ({count}) => {
+const child = ({setCount}) => {
 
-    count('hello')
+    setCount(1)
   return (
     <>
-    <div> from child </div>
+    <div> from parent{count}</div>
     
     </>
   )

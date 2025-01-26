@@ -583,3 +583,268 @@
 // heap.insert(40);
 
 // console.log(heap.heap)
+
+
+// class Node{
+//     constructor(val){
+//         this.val=val
+//         this.next=null
+
+//     }
+// }
+
+
+// class linkedlist{
+//     constructor(){
+//         this.head=null
+//         this.tail=null
+//         this.size=0
+//     }
+
+//     append(val){
+//     let node=new Node(val)
+//     if(this.size==0){
+//         this.head=node
+//     }else{
+//         this.tail.next=node
+//     }
+//     this.tail=node
+//     this.size++
+//     }
+
+//     prepend(val){
+//         let node=new Node(val)
+//         if(this.size==0){
+//             this.tail=node
+//         }else{
+//             node.next=this.head
+//         }
+//         this.head=node
+//         this.size++
+//         }
+//         reverse(){
+//             let curr=this.head
+//             let prev=null
+//             while(curr!=null){
+//                 let temp=curr.next
+//                 curr.next=prev
+//                 prev=curr
+//                 curr=temp
+//             }
+//             // this.head=prev
+//         }
+
+//         delete(val){
+//           let curr=this.head
+//           while(curr&&curr.next!=null){
+//             if(curr.next.val==val){
+//                 curr.next=curr.next.next
+//                 this.size--
+//             }else{
+//                 curr=curr.next
+//             }
+           
+//           } 
+//         }
+//     }
+
+  
+
+
+// const list=new linkedlist()
+// const list2=new linkedlist
+// list.prepend(10)
+// list.prepend(20)
+// list.prepend(30)
+// list.prepend(40)
+// list.prepend(50)
+
+// list2.prepend(10)
+// list2.prepend(20)
+// list2.prepend(30)
+// list2.prepend(40)
+// list2.prepend(50)
+
+// const mergelinklist=merge(list,list2)
+// console.log(JSON.stringify(mergelinklist))
+
+
+// function merge(list,list2){
+
+//     if(!list.head)return list2.head
+//     if(!list2.head)return list.head
+// let curr=list.head
+//     while(curr.next!=null){
+//         curr=curr.next
+//     }
+//     curr.next=list2.head
+    
+//     return list.head
+
+// }
+
+
+// class Heap{
+//     constructor(){
+//         this.heap=[]
+//     }
+
+//     insert(val){
+//        this.heap.push(val)
+//        this.bubbleup(this.heap.length-1)
+//     }
+
+//     bubbleup(idx){
+//         let parentIdx=Math.floor((idx-1)/2)
+//         if(idx>0&&this.heap[parentIdx]>this.heap[idx]){
+//             [this.heap[parentIdx],this.heap[idx]]=[this.heap[idx],this.heap[parentIdx]]
+//             this.bubbleup(parentIdx)
+//         }
+//     }
+
+//     remove(){
+//         let max=this.heap[0]
+//         this.heap[0]=this.heap.pop()
+//         this.bubbldown(0)
+//         return max
+//     }
+
+//     bubbldown(idx){
+//         let parentIdx=idx
+//         let leftchildIdx=2*idx+1
+//         let rightchildIdx=2*idx+2
+
+
+//         if(leftchildIdx<this.heap.length&&this.heap[parentIdx]>this.heap[leftchildIdx]){
+//             parentIdx=leftchildIdx
+//         }
+//         if(rightchildIdx<this.heap.length&&this.heap[parentIdx]>this.heap[rightchildIdx]){
+//             parentIdx=rightchildIdx
+//         }
+//         if(parentIdx!==idx){
+//             [this.heap[parentIdx],this.heap[idx]]=[this.heap[idx],this.heap[parentIdx]]
+//             this.bubbldown(parentIdx)
+//         }
+//     }
+// }
+
+// const heap=new Heap()
+
+// heap.insert(10)
+// heap.insert(20)
+// heap.insert(30)
+// heap.insert(40)
+// heap.insert(50)
+// console.log(heap.remove())
+// console.log(heap.remove())
+// console.log(heap.heap)
+
+
+// class Node{
+//     constructor(val){
+//         this.val=val
+//         this.left=null;
+//         this.right=null
+//     }
+// }
+
+// class Bst{
+//    constructor(){
+//     this.root=null
+//    }
+
+//    insert(val){
+//        let node=new Node(val)
+//       if(this.root==null){
+//          this.root=node
+//          return this
+//       }else{
+//         let curr=this.root
+//         while(true){
+//             if(val<curr.val){
+//               if(curr.left==null){
+//                 curr.left=node
+//                 return this
+//               }
+//               curr=curr.left
+//             }else{
+//                 if(curr.right==null){
+//                     curr.right=node
+//                     return this
+//                   }
+//                   curr=curr.right 
+//             }
+//         }
+//       }
+
+//    }
+
+//    dfs(){
+//     let data=[]
+//     let curr=this.root
+//     function trvisol(node){
+//        data.push(node.val)
+//       if(node.left){
+//         trvisol(node.left)
+//       }
+//       if(node.right){
+//         trvisol(node.right)
+//       }
+
+//     }
+//     trvisol(curr)
+//     return data
+//    }
+// }
+
+
+// const bst=new Bst()
+
+// bst.insert(10)
+// bst.insert(20)
+// bst.insert(30)
+// bst.insert(40)
+// bst.insert(50)
+// console.log(bst.dfs())
+// console.log(bst.root)
+
+
+
+// let str='sasjkdpeooooo'
+
+// let curr=''
+// let maxlength=''
+
+// for(let i=0;i<str.length;i++){
+//     if(curr[curr.length-1]===str[i]){
+//         curr+=str[i]
+//     }else{
+//         curr=str[i]
+//     }
+
+//     maxlength=curr.length>maxlength.length?curr:maxlength
+// }
+
+
+// console.log(maxlength)
+
+
+// let a=[1,2,3,4,5]
+// let b=[]
+
+// for(let i=0;i<a.length;i++){
+//     b.push(a[i])
+// }
+
+// console.log(b.pop())
+// console.log(b)
+// console.log(a)
+
+// let a={name:'sasi',age:25}
+// let b={}
+// for(let i in a){
+//   b[i]=a[i]
+// }
+// a.age=26
+// console.log(a)
+
