@@ -1,15 +1,25 @@
-const express = require('express')
+const express = require('express');
+const fs=require('fs')
+const app = express();
+const router = express.Router();
 
+app.get('/', (req, res) => {
+  fs.appendFile('file.txt',`${new Date()}\n`,(err)=>{
+    
+  })
+  res.send('hello world');
+});
 
-const app=express()
+// router.get('/',(req,res)=>{
+//   res.send('hey')
+// })
 
-app.get('/',async(req,res)=>{
-     
-  let response=await fetch('https://jsonplaceholder.typicode.com/todos/1')
-  const  data=await response.json()
-  res.send(data)
-})
+// router.get('/sasi',(req,res)=>{
+//   res.send('hai')
+// })
 
-app.listen(8000,()=>{
-    console.log('port Start')
-})
+// app.use('/sasi', router);
+
+app.listen(8000, () => {
+  console.log('server started on port 5000');
+});
