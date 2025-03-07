@@ -54,9 +54,10 @@ class linkedlist{
  }
  delete(val){
   let curr=this.head
+  
   while(curr.next){
       if(curr.next.val==val){
-          curr.next=curr.next.next
+          curr=curr.next
       }
       
       curr=curr.next
